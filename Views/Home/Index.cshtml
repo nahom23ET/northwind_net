@@ -1,0 +1,317 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+
+
+<table border="1">
+    <tr>
+        <th>Catagory ID</th>
+        <th>Catagory Name</th>
+        <th>Description</th>
+    </tr>
+
+    @foreach (var c in ViewBag.ListOfCategories)
+    {
+        <!--
+           Console.WriteLine(c.ToString());
+           -->
+
+        <tr>
+            <td>@c.CatagoryId</td>
+            <td>@c.CatagoryName</td>
+            <td>@c.Description</td>
+        </tr>
+    }
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="1">
+    <tr>
+        <th>Employee Id</th>
+        <th>Last Name</th>
+        <th>First Name </th>
+        <th>Title</th>
+        <th>Title OfCourtesy</th>
+        <th>Birth Date </th>
+        <th>Hire Date</th>
+        <th>Address </th>
+        <th>City </th>
+        <th>Region</th>
+        <th>Postal Code</th>
+        <th>Country </th>
+        <th>Home Phone</th>
+        <th>Extension</th>
+        <th>Notes </th>
+        <th>Reports To </th>
+
+
+    </tr>
+
+
+
+
+    @foreach (var e in ViewBag.ListOfEmployees)
+    {
+        <!--
+        Console.WriteLine(e.ToString());
+               -->
+
+        <tr>
+            <td>@e.EmployeeId</td>
+            <td>@e.LastName</td>
+            <td>@e.FirstName</td>
+            <td>@e.Title</td>
+            <td>@e.TitleOfCourtesy</td>
+            <td>@e.BirthDay</td>
+            <td>@e.HireDay</td>
+            <td>@e.Address</td>
+            <td>@e.City</td>
+            <td>@e.Region</td>
+            <td>@e.PostalCode</td>
+            <td>@e.Country</td>
+            <td>@e.HomePhone</td>
+            <td>@e.Extension</td>
+            <td>@e.Notes</td>
+            <td>@e.ReportsTo</td>
+
+        </tr>
+
+    }
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<table border="1">
+    <tr>
+        <th>Order Id</th>
+        <th>Product Id</th>
+        <th>Unit Price </th>
+        <th>Quantity</th>
+        <th>Discount</th>
+
+
+
+
+    </tr>
+
+
+
+
+    @foreach (var od in ViewBag.ListOfOrderDetails)
+    {
+        <!--
+              Console.WriteLine(od.ToString());
+              -->
+
+        <tr>
+            <td>@od.OrderId</td>
+            <td>@od.ProductId</td>
+            <td>@od.UnitPrice</td>
+            <td>@od.Quantity</td>
+            <td>@od.Discount</td>
+
+
+        </tr>
+
+    }
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+<table border="1">
+    <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Supplier Id</th>
+        <th>Category Id</th>
+        <th>Quantity PerUnit</th>
+        <th>Unit Price</th>
+        <th>Units InStock</th>
+        <th>Units InOrder</th>
+        <th>Reorder Level</th>
+        <th>Discontinued</th>
+
+
+
+
+    </tr>
+    @foreach (var p in ViewBag.ListOfProducts)
+    {
+        <!--
+              Console.WriteLine(p.ToString());
+              -->
+
+        <tr>
+            <td>@p.ProductId</td>
+            <td>@p.ProductName</td>
+            <td>@p.SupplierId</td>
+            <td>@p.CatagoryId</td>
+            <td>@p.QuantityPerUnit</td>
+            <td>@p.UnitPrice</td>
+            <td>@p.UnitsInStock</td>
+            <td>@p.UnitsOnOrder</td>
+            <td>@p.ReOrderLevel</td>
+            <td>@p.Discontinued</td>
+
+        </tr>
+    }
+
+
+
+
+
+
+
+
+</table>
+
+
+
+<table border="1">
+    <tr>
+        <th>Shipper Id</th>
+        <th>Company Name/th>
+        <th>Phone </th>
+
+
+
+
+
+    </tr>
+
+    @foreach (var s in ViewBag.ListOfShippers)
+    {
+        <!--
+              Console.WriteLine(s.ToString());
+              -->
+
+        <tr>
+            <td>@s.ShipperID</td>
+            <td>@s.CompanyName</td>
+            <td>@s.Phone</td>
+
+
+        </tr>
+
+
+
+
+    }
+
+
+</table>
+
+
+
+
+
+<table border="1">
+    <tr>
+        <th>Supplier Id
+        <th>
+        <th>Company Name</th>
+        <th>Contact Name </th>
+        <th>Contact Title</th>
+        <th>Address </th>
+        <th>City </th>
+        <th>Region</th>
+        <th>Postal Code </th>
+        <th>City </th>
+        <th>Region</th>
+        <th>Postal Code</th>
+        <th>Country </th>
+        <th>Phone</th>
+        <th> Fax</th>
+        <th>Home Page  </th>
+
+
+
+
+
+    </tr>
+
+    @foreach (var s in ViewBag.ListOfSuppliers)
+    {
+
+        <!--
+               Console.WriteLine(s.ToString());
+               -->
+
+        <tr>
+            <td>@s.SupplierId</td>
+            <td>@s.CompanyName</td>
+            <td>@s.ContactName</td>
+            <td>@s.ContactTitle</td>
+            <td>@s.Address</td>
+            <td>@s.City/></td>
+            <td>@s.Region</td>
+            <td>@s.PostalCode</td>
+            <td>@s.City</td>
+            <td>@s.Region</td>
+            <td>@s.PostalCode</td>
+            <td>@s.Country</td>
+            <td>@s.Phone</td>
+            <td>@s.Fax</td>
+            <td>@s.HomePage </td>
+
+
+        </tr>
+    }
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
